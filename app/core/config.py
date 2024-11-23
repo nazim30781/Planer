@@ -3,12 +3,17 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class RunConfig(BaseModel):
-    host: str = "0.0.0.0"
+    host: str = "127.0.0.1"
     port: int = 8000
+
+
+class ApiAppsPrefix(BaseModel):
+    users: str = "/users"
 
 
 class ApiPrefix(BaseModel):
     prefix: str = "/api"
+    apps: ApiAppsPrefix = ApiAppsPrefix()
 
 
 class DatabaseConfig(BaseModel):
@@ -17,6 +22,11 @@ class DatabaseConfig(BaseModel):
     echo_pool: bool = False
     pool_size: int = 50
     max_overflow: int = 10
+
+
+class JWTConfig(BaseModel):
+    jwt_secret: str
+    jwt_algorithm: str
 
 
 class Settings(BaseSettings):
@@ -28,6 +38,7 @@ class Settings(BaseSettings):
     )
     run: RunConfig = RunConfig()
     api: ApiPrefix = ApiPrefix()
+    jwt: JWTConfig
     db: DatabaseConfig
 
 settings = Settings()
