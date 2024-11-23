@@ -7,4 +7,4 @@ class UserBase(BaseModel):
 
 
 class UserCreateModel(UserBase):
-    username: str
+    pass
