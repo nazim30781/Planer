@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel
+from pydantic import BaseModel
 from pydantic_settings import BaseSettings
 
 
@@ -11,8 +11,17 @@ class ApiPrefix(BaseModel):
     prefix: str = "/api"
 
 
-class Setting(BaseSettings):
+class DatabaseConfig(BaseModel):
+    url: str
+    echo: bool = False
+    echo_pool: bool = False
+    pool_size: int = 50
+    max_overflow: int = 10
+
+
+class Settings(BaseSettings):
     run: RunConfig = RunConfig()
     api: ApiPrefix = ApiPrefix()
+    db: DatabaseConfig = DatabaseConfig
 
-settings = Setting()
+settings = Settings()
