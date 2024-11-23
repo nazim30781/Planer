@@ -10,6 +10,7 @@ from alembic import context
 from core.config import settings
 
 from api.users.models import User
+from api.authors.models import Author
 from core.models import Base
 
 # this is the Alembic Config object, which provides
