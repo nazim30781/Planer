@@ -9,7 +9,7 @@ class AccessTokenBearer(HTTPBearer):
     def __init__(self, auto_error = True):
         super().__init__(auto_error=auto_error)
 
-    async def __call__(self, request: Request) -> HTTPAuthorizationCredentials | None:
+    async def __call__(self, request: Request) -> dict | None:
         creds = await super().__call__(request)
 
         token = creds.credentials
@@ -22,7 +22,12 @@ class AccessTokenBearer(HTTPBearer):
         if token_data['refresh']:
             raise "Refresh Error"
 
-        return creds
+        data = dict()
+
+        data["user_details"] = token_data["user"]
+        data["creds"] = creds
+
+        return data
 
     def token_valid(self, token: str) -> bool:
         token_data = decode_token(token)
@@ -31,3 +36,5 @@ class AccessTokenBearer(HTTPBearer):
             return True
 
         return False
+
+access_token_bearer = AccessTokenBearer()

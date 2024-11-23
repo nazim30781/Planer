@@ -10,7 +10,6 @@ from core.models import db_helper
 
 from .schemas import UserCreateModel, UserBase
 from .utils import verify_password, create_access_token
-from .dependencies import AccessTokenBearer
 from .crud import user_exists, create_user, get_user_by_email
 
 
@@ -20,7 +19,6 @@ router = APIRouter(
 )
 
 REFRESH_TOKEN_EXPIRY = 2
-access_token_bearer = AccessTokenBearer()
 
 
 @router.post("/signup")

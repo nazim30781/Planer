@@ -11,7 +11,7 @@ from .utils import generate_passwd_hash
 async def get_user_by_email(
         email:str,
         session: AsyncSession
-) -> User | None:
+) -> User:
     query = select(User).where(User.email == email)
 
     result = await session.execute(query)
@@ -33,7 +33,7 @@ async def user_exists(
 async def create_user(
         user_data: UserCreateModel,
         session: AsyncSession
-):
+) -> User:
     new_user = User(**user_data.model_dump())
     new_user.password = generate_passwd_hash(new_user.password)
 
