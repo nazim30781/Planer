@@ -1,5 +1,3 @@
-from typing import Optional
-
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -11,13 +9,13 @@ from .utils import generate_passwd_hash
 async def get_user_by_email(
         email:str,
         session: AsyncSession
-) -> User:
+):
     query = select(User).where(User.email == email)
 
     result = await session.execute(query)
     user = result.first()
 
-    return user
+    return user[0]
 
 async def user_exists(
         email: str,

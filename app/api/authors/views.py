@@ -5,7 +5,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from api.authors.crud import create_author
 from api.authors.schemas import AuthorBase
 from api.users.dependencies import access_token_bearer
-from api.users.models import User
 from core.config import settings
 from core.models import db_helper
 
