@@ -9,8 +9,7 @@ from alembic import context
 
 from core.config import settings
 
-from api.users.models import User
-from api.authors.models import Author
+import api
 from core.models import Base
 
 # this is the Alembic Config object, which provides
