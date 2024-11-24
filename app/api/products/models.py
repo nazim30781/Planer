@@ -16,4 +16,4 @@ class Product(Base):
     created_at: datetime = Column(TIMESTAMP, default=datetime.now)
     author_id: int = Column(Integer, ForeignKey("author.id"), nullable=False)
 
-    # author: Mapped["Author"] = relationship(back_populates="products")
+    author: Mapped["Author"] = relationship(back_populates="products")
