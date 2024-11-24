@@ -10,6 +10,7 @@ class RunConfig(BaseModel):
 class ApiAppsPrefix(BaseModel):
     users: str = "/users"
     authors: str = "/authors"
+    products: str = "/products"
 
 
 class ApiPrefix(BaseModel):
