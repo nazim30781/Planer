@@ -4,22 +4,37 @@ from sqlalchemy import select
 from sqlalchemy.orm import joinedload
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from api.users.dependencies import access_token_bearer
+from api.users.dependencies import access_token_bearer, get_current_user_id
 from api.users.models import User
 from core.models import db_helper
 
 
-async def get_author(
+async def get_author_id(
         session: AsyncSession = Depends(db_helper.session_getter),
-        user_data: dict = Depends(access_token_bearer)
+        user_id: dict = Depends(get_current_user_id)
 ):
-    print(user_data["user_details"]["id"])
     query = (select(User)
              .options(joinedload(User.author))
-             .where(User.id == user_data["user_details"]["id"]))
+             .where(User.id == user_id))
 
-    author = await session.execute(query)
+    user = await session.execute(query)
 
-    print(author.first()[0].author.username)
+    author_id = user.first()[0].author.id
+    print(author_id)
 
-    return author
+    return author_id
+
+
+async def get_author(
+        session: AsyncSession = Depends(db_helper.session_getter),
+        user_id: dict = Depends(get_current_user_id)
+):
+    query = (select(User)
+             .options(joinedload(User.author))
+             .where(User.id == user_id))
+
+    user = await session.execute(query)
+
+    author_id = user.first()[0].author
+
+    return author_id

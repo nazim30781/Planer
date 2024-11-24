@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from api.authors.crud import create_author
 from api.authors.schemas import AuthorBase
-from api.users.dependencies import access_token_bearer
+from api.users.dependencies import get_current_user_id
 from core.config import settings
 from core.models import db_helper
 
@@ -16,11 +16,9 @@ router = APIRouter(
 @router.post("/create_author")
 async def create_author_view(
         author_data: AuthorBase,
-        user: dict = Depends(access_token_bearer),
+        user_id: int = Depends(get_current_user_id),
         session: AsyncSession = Depends(db_helper.session_getter)
 ):
-
-    user_id = user["user_details"]["id"]
 
     author = await create_author(user_id, author_data, session)
 
