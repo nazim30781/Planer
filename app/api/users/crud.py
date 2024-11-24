@@ -15,7 +15,10 @@ async def get_user_by_email(
     result = await session.execute(query)
     user = result.first()
 
-    return user[0]
+    if user:
+        return user[0]
+
+    return None
 
 async def user_exists(
         email: str,
@@ -26,7 +29,7 @@ async def user_exists(
     if user is not None:
         return user
 
-    return False
+    return None
 
 async def create_user(
         user_data: UserCreateModel,

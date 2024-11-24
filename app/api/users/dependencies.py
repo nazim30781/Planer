@@ -1,4 +1,5 @@
 from fastapi import Request
+from fastapi.params import Depends
 from fastapi.security import HTTPBearer
 from fastapi.security.http import HTTPAuthorizationCredentials
 
@@ -38,3 +39,11 @@ class AccessTokenBearer(HTTPBearer):
         return False
 
 access_token_bearer = AccessTokenBearer()
+
+
+async def get_current_user_id(user_data: dict = Depends(access_token_bearer)) -> int:
+    id = user_data["user_details"]["id"]
+
+    return id
+
+
