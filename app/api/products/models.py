@@ -8,6 +8,7 @@ from core.models import Base
 
 if TYPE_CHECKING:
     from api.authors.models import Author
+    from api.books.models import Book
 
 
 class Product(Base):
@@ -17,3 +18,4 @@ class Product(Base):
     author_id: int = Column(Integer, ForeignKey("author.id"), nullable=False)
 
     author: Mapped["Author"] = relationship(back_populates="products")
+    books: Mapped[list["Book"]] = relationship(back_populates="product")
