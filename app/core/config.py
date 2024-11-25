@@ -11,6 +11,8 @@ class ApiAppsPrefix(BaseModel):
     users: str = "/users"
     authors: str = "/authors"
     products: str = "/products"
+    books: str = "/books"
+
 
 
 class ApiPrefix(BaseModel):
