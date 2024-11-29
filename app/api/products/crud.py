@@ -1,10 +1,17 @@
-from fastapi.params import Depends
-from sqlalchemy.ext.asyncio import AsyncSession
+from datetime import time, datetime
+from itertools import product
 
-from api.authors.dependencies import get_author_id
+from fastapi.params import Depends
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import joinedload
+
 from api.products.schemas import ProductBase
 
-from .models import Product
+from .products import Product
+from .. import AuthorTable, ProductTime, ProductDate, Author
+from ..authors.crud import get_first_author_table
+from ..authors.dependencies import get_author_with_products
 
 
 async def create_product(
@@ -16,6 +23,97 @@ async def create_product(
     new_product.author_id = author_id
 
     session.add(new_product)
-    await session.commit()
+    await session.flush()
+
+    await create_days_for_product(new_product.id, author_id, session)
 
     return new_product
+
+
+async def create_days_for_product(
+        product_id,
+        author_id: int,
+        session: AsyncSession
+):
+    query = select(Product).where(Product.id==product_id)
+
+    product = await session.execute(query)
+
+    hours = product.first()[0].hours
+
+    result = await get_first_author_table(author_id, session)
+    author_table = result.tables[0]
+
+    dates = author_table.dates
+
+    for date in dates:
+        instance = ProductDate(date=date.date, product_id=product_id)
+
+        session.add(instance)
+
+        await session.flush()
+
+        await create_times_for_date(
+            instance.id,
+            author_table.min_hour,
+            author_table.max_hour,
+            hours,
+            session
+        )
+
+    await session.commit()
+
+
+async def create_times_for_date(
+        date_id: int,
+        min_hour: int,
+        max_hour: int,
+        product_hours: int,
+        session: AsyncSession
+):
+    print(product_hours)
+    times = []
+
+    for i in range(min_hour, max_hour + 1, product_hours):
+        c_time = time(i, 0, 0)
+        new_time = ProductTime(time=c_time)
+        new_time.date_id = date_id
+
+        times.append(new_time)
+        session.add(new_time)
+
+
+async def get_product(
+        product_id: int,
+        session: AsyncSession
+):
+    query = select(Product).options(joinedload(Product.dates).joinedload(ProductDate.times)).where(Product.id==product_id)
+    result = await session.execute(query)
+    product = result.first()[0]
+
+    return product
+
+
+async def get_all_products(
+        author: Author,
+):
+    products = [product for product in author.products]
+
+    return products
+
+
+async def get_product_time_id(
+        product_id: int,
+        product_time: datetime,
+        session: AsyncSession
+):
+    query = select(Product).options(joinedload(Product.dates).joinedload(ProductDate.times)).where(Product.id==product_id)
+
+    product = await session.execute(query)
+    product = product.first()[0]
+
+    for date in product.dates:
+        if date.date.date()==product_time.date():
+            for time in date.times:
+                if time.time.hour == product_time.time().hour and time.time.minute == product_time.time().minute:
+                    return time.id
