@@ -14,7 +14,6 @@ class ApiAppsPrefix(BaseModel):
     books: str = "/books"
 
 
-
 class ApiPrefix(BaseModel):
     prefix: str = "/api"
     apps: ApiAppsPrefix = ApiAppsPrefix()

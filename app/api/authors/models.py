@@ -7,7 +7,8 @@ from core.models import Base
 
 if TYPE_CHECKING:
     from api.users.models import User
-    from api.products.models import Product
+    from api.products.products import Product
+    from .author_table import AuthorTable
 
 
 class Author(Base):
@@ -18,3 +19,4 @@ class Author(Base):
 
     user: Mapped["User"] = relationship(back_populates="author")
     products: Mapped[list["Product"]] = relationship(back_populates="author")
+    tables: Mapped[list["AuthorTable"]] = relationship(back_populates="author")
