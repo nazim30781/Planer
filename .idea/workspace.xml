@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa7a551c-886e-4965-b113-50016a4a4158" name="Changes" comment="books review">
+      <change afterPath="$PROJECT_DIR$/.idea/Planer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/authors/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authors/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/authors/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authors/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/authors/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/authors/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/books/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/books/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/books/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/products/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/products/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2pDKOfl6USnLu2gOwAsoPrO2u3E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.crud.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/topti/programming/Planer/app/main.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\topti\programming\Planer\app" />
+      <recent name="C:\Users\topti\programming\Planer" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Planer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa7a551c-886e-4965-b113-50016a4a4158" name="Changes" comment="" />
+      <created>1732295175412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732295175412</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit: create .gitignore">
+      <option name="closed" value="true" />
+      <created>1732295599437</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732295599437</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add pyproject.toml">
+      <option name="closed" value="true" />
+      <created>1732295685928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732295685928</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Install initial dependencies">
+      <option name="closed" value="true" />
+      <created>1732295738955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732295738955</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created main app">
+      <option name="closed" value="true" />
+      <created>1732296063250</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732296063250</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created main settings">
+      <option name="closed" value="true" />
+      <created>1732296582690</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732296582690</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create api router">
+      <option name="closed" value="true" />
+      <created>1732297043503</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732297043503</updated>
+    </task>
+    <task id="LOCAL-00007" summary="use run settings">
+      <option name="closed" value="true" />
+      <created>1732297116726</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732297116726</updated>
+    </task>
+    <task id="LOCAL-00008" summary="include api router to main app">
+      <option name="closed" value="true" />
+      <created>1732297140480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732297140480</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add sql + asyncio">
+      <option name="closed" value="true" />
+      <created>1732347626027</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732347626027</updated>
+    </task>
+    <task id="LOCAL-00010" summary="install asyncpg">
+      <option name="closed" value="true" />
+      <created>1732347683307</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732347683307</updated>
+    </task>
+    <task id="LOCAL-00011" summary="create database config">
+      <option name="closed" value="true" />
+      <created>1732349197576</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732349197576</updated>
+    </task>
+    <task id="LOCAL-00012" summary="create database helper">
+      <option name="closed" value="true" />
+      <created>1732349209138</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732349209138</updated>
+    </task>
+    <task id="LOCAL-00013" summary="config read from env">
+      <option name="closed" value="true" />
+      <created>1732349960820</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732349960820</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add db helper dispose to main app">
+      <option name="closed" value="true" />
+      <created>1732350004495</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732350004495</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add declarative base">
+      <option name="closed" value="true" />
+      <created>1732350405911</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732350405911</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change declarative base">
+      <option name="closed" value="true" />
+      <created>1732350436703</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732350436703</updated>
+    </task>
+    <task id="LOCAL-00017" summary="install alembic + black">
+      <option name="closed" value="true" />
+      <created>1732350866892</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732350866892</updated>
+    </task>
+    <task id="LOCAL-00018" summary="init async alembic + config">
+      <option name="closed" value="true" />
+      <created>1732351098169</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732351098169</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add api apps prefix">
+      <option name="closed" value="true" />
+      <created>1732381683917</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732381683917</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add bcrypt + pyjwt">
+      <option name="closed" value="true" />
+      <created>1732381750739</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732381750739</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add users app and move alembic.ini">
+      <option name="closed" value="true" />
+      <created>1732381802138</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732381802138</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add User model import">
+      <option name="closed" value="true" />
+      <created>1732381824575</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732381824575</updated>
+    </task>
+    <task id="LOCAL-00023" summary="delete username from User model + add prefix from config">
+      <option name="closed" value="true" />
+      <created>1732382158337</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732382158337</updated>
+    </task>
+    <task id="LOCAL-00024" summary="create authors app">
+      <option name="closed" value="true" />
+      <created>1732382731904</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732382731904</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add relationships between user and author">
+      <option name="closed" value="true" />
+      <created>1732383157930</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383157930</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add author schemas">
+      <option name="closed" value="true" />
+      <created>1732384990890</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732384990890</updated>
+    </task>
+    <task id="LOCAL-00027" summary="review access token dependencies">
+      <option name="closed" value="true" />
+      <created>1732385043581</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732385043581</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add authors prefix">
+      <option name="closed" value="true" />
+      <created>1732385071493</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732385071493</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add views and crud for authors">
+      <option name="closed" value="true" />
+      <created>1732385096177</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732385096177</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add import models from api to .env">
+      <option name="closed" value="true" />
+      <created>1732453873007</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732453873007</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add dependencies to get author">
+      <option name="closed" value="true" />
+      <created>1732453921034</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732453921034</updated>
+    </task>
+    <task id="LOCAL-00032" summary="some code review">
+      <option name="closed" value="true" />
+      <created>1732453932559</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1732453932559</updated>
+    </task>
+    <task id="LOCAL-00033" summary="create products app">
+      <option name="closed" value="true" />
+      <created>1732453950213</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1732453950213</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add products prefix">
+      <option name="closed" value="true" />
+      <created>1732471693051</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1732471693051</updated>
+    </task>
+    <task id="LOCAL-00035" summary="review user depends">
+      <option name="closed" value="true" />
+      <created>1732471727931</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1732471727931</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add relationships between products and authors">
+      <option name="closed" value="true" />
+      <created>1732471780426</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1732471780426</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add products schemas">
+      <option name="closed" value="true" />
+      <created>1732471801848</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1732471801848</updated>
+    </task>
+    <task id="LOCAL-00038" summary="review authors dependencies">
+      <option name="closed" value="true" />
+      <created>1732471831549</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1732471831549</updated>
+    </task>
+    <task id="LOCAL-00039" summary="add products view">
+      <option name="closed" value="true" />
+      <created>1732471847457</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1732471847457</updated>
+    </task>
+    <task id="LOCAL-00040" summary="import products router">
+      <option name="closed" value="true" />
+      <created>1732471871461</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1732471871461</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add books app">
+      <option name="closed" value="true" />
+      <created>1732505327564</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1732505327564</updated>
+    </task>
+    <task id="LOCAL-00042" summary="add relationships between books and users and product">
+      <option name="closed" value="true" />
+      <created>1732505366003</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1732505366003</updated>
+    </task>
+    <task id="LOCAL-00043" summary="add author table">
+      <option name="closed" value="true" />
+      <created>1732899071461</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1732899071461</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add products dates">
+      <option name="closed" value="true" />
+      <created>1732899117922</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1732899117922</updated>
+    </task>
+    <task id="LOCAL-00045" summary="add products dates">
+      <option name="closed" value="true" />
+      <created>1732899126212</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1732899126212</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add author_products dependencies">
+      <option name="closed" value="true" />
+      <created>1732899148322</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1732899148322</updated>
+    </task>
+    <task id="LOCAL-00047" summary="books review">
+      <option name="closed" value="true" />
+      <created>1732899168242</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1732899168242</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add User model import" />
+    <MESSAGE value="delete username from User model + add prefix from config" />
+    <MESSAGE value="create authors app" />
+    <MESSAGE value="add relationships between user and author" />
+    <MESSAGE value="add author schemas" />
+    <MESSAGE value="review access token dependencies" />
+    <MESSAGE value="add authors prefix" />
+    <MESSAGE value="add views and crud for authors" />
+    <MESSAGE value="add import models from api to .env" />
+    <MESSAGE value="add dependencies to get author" />
+    <MESSAGE value="some code review" />
+    <MESSAGE value="create products app" />
+    <MESSAGE value="add products prefix" />
+    <MESSAGE value="review user depends" />
+    <MESSAGE value="add relationships between products and authors" />
+    <MESSAGE value="add products schemas" />
+    <MESSAGE value="review authors dependencies" />
+    <MESSAGE value="add products view" />
+    <MESSAGE value="import products router" />
+    <MESSAGE value="add books app" />
+    <MESSAGE value="add relationships between books and users and product" />
+    <MESSAGE value="add author table" />
+    <MESSAGE value="add products dates" />
+    <MESSAGE value="add author_products dependencies" />
+    <MESSAGE value="books review" />
+    <option name="LAST_COMMIT_MESSAGE" value="books review" />
+  </component>
+</project>

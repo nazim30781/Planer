@@ -1,4 +1,4 @@
-from datetime import time, datetime
+from datetime import time, datetime, date
 from itertools import product
 
 from fastapi.params import Depends
@@ -11,7 +11,7 @@ from api.products.schemas import ProductBase
 from .products import Product
 from .. import AuthorTable, ProductTime, ProductDate, Author
 from ..authors.crud import get_first_author_table
-from ..authors.dependencies import get_author_with_products
+from ..authors.dependencies import get_author_with_products, get_author_id
 
 
 async def create_product(
@@ -33,18 +33,20 @@ async def create_product(
 async def create_days_for_product(
         product_id,
         author_id: int,
-        session: AsyncSession
+        session: AsyncSession,
+        dates: list[date] | None,
 ):
-    query = select(Product).where(Product.id==product_id)
-
-    product = await session.execute(query)
-
-    hours = product.first()[0].hours
-
     result = await get_first_author_table(author_id, session)
     author_table = result.tables[0]
 
-    dates = author_table.dates
+    if dates is None:
+        query = select(Product).where(Product.id == product_id)
+
+        product = await session.execute(query)
+
+        hours = product.first()[0].hours
+
+        dates = author_table.dates
 
     for date in dates:
         instance = ProductDate(date=date.date, product_id=product_id)
@@ -87,7 +89,11 @@ async def get_product(
         product_id: int,
         session: AsyncSession
 ):
-    query = select(Product).options(joinedload(Product.dates).joinedload(ProductDate.times)).where(Product.id==product_id)
+    query = (select(Product).
+             options(joinedload(Product.dates).
+                     joinedload(ProductDate.times)).
+             where(Product.id==product_id))
+
     result = await session.execute(query)
     product = result.first()[0]
 
@@ -95,11 +101,14 @@ async def get_product(
 
 
 async def get_all_products(
-        author: Author,
+        session: AsyncSession
 ):
-    products = [product for product in author.products]
+    query = select(Product)
 
-    return products
+    products = await session.execute(query)
+
+
+    return products.scalars().all()
 
 
 async def get_product_time_id(
@@ -117,3 +126,12 @@ async def get_product_time_id(
             for time in date.times:
                 if time.time.hour == product_time.time().hour and time.time.minute == product_time.time().minute:
                     return time.id
+
+
+async def add_days_for_product(
+        product_id: int,
+        dates: list[date],
+        author_id: int,
+        session: AsyncSession,
+):
+    await create_days_for_product(product_id, author_id, session, dates)

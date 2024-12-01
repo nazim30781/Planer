@@ -1,6 +1,7 @@
 from datetime import date
 
 from pydantic import BaseModel
+from virtualenv.config.convert import NoneType
 
 
 class AuthorBase(BaseModel):
@@ -17,3 +18,11 @@ class Table(BaseModel):
 
 class Date(BaseModel):
     data: list[date]
+
+
+class TableUpdate(BaseModel):
+    table_id: int
+    title: str | None
+    min_hour: int | None
+    max_hour: int | None
+    dates: list[date]
